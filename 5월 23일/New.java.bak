@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class New {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("값을 입력하세요 : ");
+		int a = scan.nextInt();
+		int b = 1;
+		b += ;
+		System.out.print(a + b);
+	}
+}
