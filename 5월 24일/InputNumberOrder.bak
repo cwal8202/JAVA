@@ -1,0 +1,35 @@
+// 2 ~ 9 까지의 무작위 수를 정하여
+// 사용자가 해당하는 수의 배수를 순서대로 입력하게끔
+// 틀릴 경우 종료
+
+// 예) 랜덤 수가 6일 경우
+
+// 사용자 입력
+// 6 0 
+// 12 0
+// 18 0
+// 21 x 종료
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class SixGame {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Random random = new Random();
+		int a = random.nextInt(7);
+		int b = a + 2;
+		System.out.printf("%d의 배수를 적어라\n", b);
+		
+		int result = 1;
+		for ( int i = 1;  ; i++) {
+			int input = scan.nextInt();
+			result = b * i;
+			if (result == input) {
+			System.out.print("O");
+			} else {
+				break;
+			}
+		} System.out.print("x");
+	}
+}
