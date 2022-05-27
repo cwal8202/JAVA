@@ -1,0 +1,17 @@
+public class StringMethods {
+	public static void main(String[] args) {
+		String hello = "hello";
+		
+		int index = hello.indexOf("o");
+		System.out.println(index);
+		
+		int notFound = hello.indexOf("a");
+		System.out.println(notFound); // 값을 못찾으면 무조건 -1이 뜬다.
+		
+		int index2 = hello.indexOf("l");
+		System.out.println(index2);
+		
+		int index3 = hello.lastIndexOf("l");
+		System.out.println(index3);
+	}
+}

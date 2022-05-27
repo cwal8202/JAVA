@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class InputString {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int i = scan.nextInt(); //scan은 숫자를 먼저 입력한 후 enter키를 눌리면
+		scan.nextLine();		//enter키가 저장된다. scan은 
+		System.out.println("한줄을 입력하세요 : ");
+		String line = scan.nextLine();
+		
+		System.out.println(line);
+	}
+}

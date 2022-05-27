@@ -1,0 +1,21 @@
+//사용자의 나이와 이름을 입력받아서
+// 자기랑 같으면 true 출력하기
+import java.util.Scanner;
+
+public class MyName {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("나이를 입력하세요 : ");
+		int age = scan.nextInt();
+		System.out.print("이름을 입력하세요 : ");
+		scan.nextLine(); // 빈값을 줘서 enter키 리셋하는 것.
+		String name = scan.nextLine();
+		
+		
+		String myname = "최장호";
+		int myage = 24;
+		
+		System.out.println((age == myage) && name.equals(myname));
+	}
+}
