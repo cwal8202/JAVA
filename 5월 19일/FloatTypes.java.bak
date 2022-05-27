@@ -1,0 +1,18 @@
+public class FloatTypes {
+	public static void main(String[] args) {
+		float f = 123.456F; //실수 표현이 기본적으로 double이라 생각하는데 float타입이라고 알리기 위해 F를 썼다.
+		double d = 7777.88888;
+		
+		// float sum = f + d;
+		// System.out.println(f + d); 컴파일 오류난다. double이 float보다 크기때문.
+
+		// int i = 10000;
+		// float sum = i + f;  정수와 실수의 합은 실수를 따라가므로 float을 썼다.
+		
+		float one = 0.1f;
+		System.out.printf("%.15f\n", one * 22); // %.15f = % 실수를 나타내는 자리, .15f는 15번째자리까지라는뜻
+		System.out.printf("%010d", 10);
+
+	}
+
+}
