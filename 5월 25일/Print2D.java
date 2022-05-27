@@ -1,0 +1,13 @@
+// (1,1) (1,2) (1,3) (1,4)
+
+public class Print2D {
+	public static void main(String[] args) {
+		for (int a = 1; a < 5; a++) {
+			for (int b = 1; b < 5; b++){
+				System.out.printf("(%d, %d) ", a, b);
+			}
+			System.out.println();
+		}
+		
+	}
+}

@@ -1,0 +1,22 @@
+public class SwitchCase {
+	public static void main(String[] args) {
+		int i = 3;
+		
+		switch (i) { // switch에는 정수값 또는 문자열값이 나온다.
+			case 1:
+			System.out.println("일");
+			break;
+			case 2:
+			System.out.println("이");
+			break;
+			case 3:
+			System.out.println("삼");
+			break;
+			default:  // 스위치 케이스에 해당하는 값이 없을때 default값이 출력됨.
+			System.out.println("일이삼 아님");
+			
+			
+		}
+	}
+	
+}
