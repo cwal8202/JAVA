@@ -1,0 +1,63 @@
+command
+
+CLI (Command Line Interface) cmd로 입력하는것
+
+GUI (Graphic User Interface) 그림기반의 인터페이스
+
+cmd에서 위치 이동하는법 : cd (change directory) 
+	-한단계 위로 = cd ..
+	-파일로 들어갈려면 파일 명 입력 ex) cd User
+	-root 즉 뿌리로 가고싶을때 = cd\
+
+cmd에서 파일 만드는법
+mkdir 파일명
+notepad 파일명.java or 확장명 (txt 등등)
+
+
+
+javac가 cmd입력 안될땐 cmd에서 경로를 찾아서 검색해줘야한다.
+그렇게 찾아가는것이 오래 걸리기때문에 "시스템 환경변수 편집"
+
+
+
+자바는 '객체지향' 언어다.  자바가상머신 jvm 으로 컴퓨터 구조에 중립적이다.
+
+java se (standard edtion) 
+
+jdk 컴파일러 포함 키트
+
+jre 컴파일러 포함 실행요소- 실행만 위한 일반유저들이 쓰는것
+
+개발자는 jdk, jre 둘다 필요.
+
+
+------------------------------------------------------------------------------------------
+
+public class Hello {   // Hello 클래스(class)
+    public static void main(String[ ] args) {   // 메인 메소드(method)
+        System.out.println("Hello World");
+    }
+}
+에서 Hello는 내가 만든 파일명이랑 동일한 것이다.
+
+class는 첫글자가 대문자인 영어로 지어준다. class 범위 영역을 표시하는게 { }
+
+" " = string or 문자열
+
+00000010(숫자가 8개라서 8bit => 1byte라고 한다.)
+
+cmd와 메모장의 이진법 표현이 다르기 때문에 cmd에서 java Hello를 했을때
+오류가 났다.(숫자와 한글, 특수기호등을 읽지 못함)
+그렇기때문에 메모장에 표시된 UTF-8로 encoding을 한다.
+(javac -encoding UTF-8 Hello.java)
+
+절차수행된 프로그램. 즉 아래로 쭉 내려오면서 진행되는것
+
+JVM이 compile된 파일을 읽는 과정을 LOAD라고한다!!!
+
+class 이름은 첫글자가 대문자였다면 변수의 첫글자는 소문자로 한다.
+
+먼저 수행 된다는 것을 명시하기 위해 괄호를 하는게 좋다.
+( + *있을때 *먼저 하는건 알지만 시각적으로 바로 알기 쉽게 괄호하기)
+
+"" 문자열은 +만 된다. - / * 안됨.

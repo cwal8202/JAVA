@@ -1,0 +1,28 @@
+메소드
+메소드 헤드
+메소드 이름
+메소드 바디
+메소드 호출
+
+
+메소드 헤드 	public static void main(String [] args) {	 	}
+	 	pubic  static int number(String a,String b) { String sum = a + b; return sum; }
+	  	(1)	 (2)   (3)  (4)		(5)		(6)			(7)
+		
+		(1) 사용접근자의 형태를 분류한다.public(전체) private(개인)이 있다. 
+		
+		(2) static (정적인것을 나타냄. 동적은 reflection 대상은 객체이다.)
+
+메소드의 이름	(3) 메소드 = void 또는 string doulbe; 반환하는 형태를 나타낸다.
+		    void = 반환값 없음
+		    int = 정수값으로 반환함
+		    doulbe = 실수값으로 반환함
+		    String = 문자값으로 반환함.
+		    boolean = true 또는 false로 반환함.
+		
+		(4) main은 전달받은 메소드의 이름이다. 메소드가 많을때 main메소드가 제일 처음 시작된다. 
+		    이름짓는것은 그 메소드의 의미에 맞게 지어준다. ex) primeNumber 이란 메소드는 값을 전달받으면 전달받은 값보다 작은 소수들을 반환해준다.
+
+		(5) (   )안에는 전달받는 형태를 나타낸다. 만약 정수로 전달받은면 (int a), 실수로 전달받으면 (double a) 문자열로 전달받으면(String a)으로 전달받는다.
+	
+메소드 바디 	(6) {  } 안에서 변수를 선언했을때 변수는 지역변수이다. {   } 를 벗어나면 변수를 찾지 못해 compile 오류가 나타난다. 
