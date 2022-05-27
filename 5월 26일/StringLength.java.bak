@@ -1,0 +1,16 @@
+// 3. 전달받은 두 문자열의 길이 값의 합을 반환하는 메소드.
+public class StringLength {
+	public static int leng(String first, String second) {
+		String sum = first + second;
+		int answer = sum.length();
+		return 2;
+	}
+
+	public static void main(String[] args){
+		String input1 = "나는";
+		String input2 = "천재";
+		int result = leng(input1, input2);
+		System.out.print(result);
+		
+	}
+}

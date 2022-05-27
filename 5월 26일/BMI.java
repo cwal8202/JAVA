@@ -1,0 +1,36 @@
+// 4. 키(실수, 미터단위)와 몸무게(실수, kg단위)를 전달받아
+// 한국기준 BMI 지수(실수) 구해 반환하는 메소드.
+// BMI = (몸무게) / (키)^2
+
+// 사용자에게 키와 몸무게를 "실수"로 입력받아
+// 키와 몸무게를 bmimachine메소드에 "실수"로 전달 후 "실수"로 반환한다
+import java.util.*;
+
+public class BMI {
+	public static double bmiMachine(double h, double w) {
+		return w / (h*h);	//	 BMI = (몸무게) / (키)^2
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+			double height;
+			double weight;
+			do {
+				System.out.print("키를 입력하세요(m단위로) : ");
+				height = scan.nextDouble();
+				if (height > 10) {System.out.println("키는 m단위로 입력해야 합니다(ex : 1.84)");}
+			}
+			while ( height > 10);
+			
+			do {System.out.print("몸무게를 입력하세요(kg단위로) : ");
+				weight = scan.nextDouble();
+				if ( weight > 1000) {System.out.println("몸무게는 kg단위로 입력해야 합니다(ex : 77)");}
+			}
+			while ( weight > 1000);
+		
+		double result = bmiMachine(height, weight);
+		System.out.printf("BMI 지수 = %f", result);
+		// 오류남 *** %d는 정수만 입력가능하다. 실수는 %f로 쓴다! %s는 문자에서 씀!
+	}
+}

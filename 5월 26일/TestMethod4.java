@@ -1,0 +1,69 @@
+import java.util.*;
+
+public class TestMethod4 {
+	// 정수 하나를 전달받아 1 ~ 100 사이의 수이면 true을 반환하고, 그렇지 않으면 
+	// false를 반환하는 메소드 작성
+	public static boolean test(int i) {
+		if (i >= 1 && i <= 100) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// 사용자가 점수 입력을 3번 하는데 (점수는 무조건 1 ~ 100사이여야함)
+	// 점수 합을 출력해보세요
+
+	public static int subject(int kor, int eng, int math) {
+		int sum = kor + eng + math;
+			return sum;
+	}
+
+	public static void main(String[] args){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("국어 점수 : ");
+		int kor;
+		do { 
+			kor = scan.nextInt();
+			if (!(test(kor))) {
+				System.out.println("잘못된 입력입니다");
+			}
+		}
+		while (!(test(kor)));  // test = 1 ~ 100 사이의 수이면 true 를 만들어봄.
+			System.out.printf("국어 %d점" , kor);
+			System.out.println();
+		
+		System.out.println("영어 점수 : ");
+		int eng;
+			do { 
+				eng = scan.nextInt();
+				if (kor < 1 || kor > 100) {
+					System.out.println("잘못된 입력입니다");
+				}
+			}
+			while (eng < 1 || eng > 100);
+				System.out.printf("영어 %d점" , kor);
+				System.out.println();
+
+		System.out.println("수학 점수 : ");
+		int math;
+			do { 
+				math = scan.nextInt();
+				if (math < 1 || math > 100) {
+					System.out.println("잘못된 입력입니다");
+				}
+			}
+			while (math < 1 || math > 100);
+			System.out.printf("수학 %d점" , kor);
+			System.out.println();
+
+		int answer = subject(kor , eng , math);
+		
+		
+		System.out.print(answer);
+
+
+		// boolean result = test(44);
+		// System.out.println(result);
+	}
+}
