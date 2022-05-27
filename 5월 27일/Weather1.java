@@ -1,0 +1,43 @@
+// 날짜 클래스
+// 필드 : 연도, 월, 일
+// 메소드(기능) : "2022-05-27"
+//				"05/27/22" 어떤 형태로 할래?
+import java.util.*;
+
+class Weather {
+	int year;
+	int month;
+	int day;
+	
+	void print1() { System.out.printf("%d-%02d-%02d", year, month, day);
+	}
+	void print2() { System.out.printf("%02d/%02d/%d", month, day, year);
+	}		//** 오류 printf (month, day , year); 컴파일 오류남 day 이후 1칸 띄어졌기때문.
+}
+
+public class Weather1 {
+	public static void main(String[] args) {
+		Weather today = new Weather();
+		Scanner scan = new Scanner(System.in);
+		today.year = 2022;
+		today.month = 5;
+		today.day = 27;
+		
+		int input;
+		
+		do {
+			System.out.println("원하는 예시의 번호를 입력하세요. 1 = 2022-05-27, 2 = 05/27/22");
+			input = scan.nextInt();
+			
+			if ( input == 1) {
+				today.print1();
+				break;
+			} else if ( input == 2) {
+				today.print2();
+				break;
+			} else {
+				System.out.print("잘못된입력");
+			}
+		} while (input != 1 || input != 2);
+	}	
+}

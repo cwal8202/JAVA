@@ -1,0 +1,33 @@
+// 영화
+// 제목, 평점, 감독, 발표된 연도
+// 모든 값을 콘솔 출력하는 기능
+
+// 위의 클래스를 테스트 할 수 있는 main 메소드를 포함하는 클래스를 작성하고
+// 인스턴스화 하여 필드값을 대입연산 후 출력메소드를 호출하여 콘솔에서 값 확인.
+import java.util.*;
+
+class Movie {
+	String title;
+	double score;
+	String director;
+	int year;
+	
+	void printAll() {
+		System.out.printf("제목 : %s 평점 : %.1f 감독 : %s 연도 : %d ",
+							title, score, director, year);
+	}
+}
+
+public class Movie1 {
+	public static void main(String[] args) {
+		Movie myMovie = new Movie();
+		
+		myMovie.title = "자바 별거 없네";
+		myMovie.score = 4.1;
+		myMovie.director = "최장호";
+		myMovie.year = 2022;
+		
+		myMovie.printAll();
+	
+	}
+}
