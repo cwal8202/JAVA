@@ -1,0 +1,49 @@
+public class Car {
+	public int speed;		// 속도
+	int gear;				// 기어
+	private String color;	// 색상
+// private 외부에서 설정을 볼수도 변경할수도없다. 자기 클래스에서만 변경 가능하다.
+// 정보에 보호를 할수있다 외부에서 볼수없게 함. 숨겨놓는것이다.
+	
+	
+	
+	
+	// 첫 번째 생성자
+	public Car(String c, int s, int g) {
+		color = c;
+		speed = s;
+		gear = g;
+	}
+	
+	public Car(String c) {
+		this(c, 0, 1);		// 첫 번째 생성자를 호출한다. 
+							// 생성자를 호출할려고 쓴다.
+		System.out.println("초기화 과정 중~~");
+	}
+	
+	// 접근(색상)
+	public String getColor() {
+		return color;
+	}
+	
+	// 설정(색상)
+	public void setColor(String c) {
+		color = c;
+	}
+	// getter
+	public int getGear() {
+		return gear;
+	}
+	// setter
+	public void setGear(int g) {
+		gear = g;
+	}
+	
+	public int getSpeed() {
+		return speed;
+	}
+	
+	public void setSpeed(int s) {
+		speed = s;
+	}
+}

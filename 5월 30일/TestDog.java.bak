@@ -1,0 +1,23 @@
+public class TestDog {
+	public static void main(String[] agrs) {
+		Dog d1 = new Dog("초코", "푸들", 7);
+		Dog d2 = new Dog("예삐", "말티즈");
+		
+		System.out.print(d1.getName());
+		System.out.print(d1.getBreed());
+		System.out.print(d1.getAge());
+		
+		
+		d2.setName("최장호");
+		System.out.print(d2.getName());
+		
+		d2.setBreed("한국");
+		System.out.print(d2.getBreed());
+		
+		
+		d1.setAge(1);
+		System.out.print(d1.getAge());
+		
+		d1.printAll();
+	}
+}
