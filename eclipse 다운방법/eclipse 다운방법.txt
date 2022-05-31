@@ -1,0 +1,50 @@
+download package -> install guide -> 여기서 자바 버전에 맞는 이클립스 버전 확인하기
+-> 우리는 자바 8을 쓰기 때문에 4.16써야함.
+-> download package로 다시 돌아가서 우측하단에 4.16다운받기 ->
+
+Eclipse IDE for Java Developers 윈도우로 다운
+
+eclipse exe 클릭
+워크스페이스 경로 설정 (우리는 D드라이브에서 새로운 workspace파일 만듦)
+
+폰트설정
+window - preference - 검색창에 font검색 - colors and font 
+basic 확장시키면 text font있다 - 더블클릭 후 크기와 글꼴 바꾸기
+
+encoding 설정
+
+encoding검색 - workspace 클릭 - text file encoding 에서 default 되어 있는걸
+other 클릭 후 utf-8로 바꾸기! - 어플라이 앤 클로즈 하면 설정 되었다!
+
+파일 하나는 프로젝트라고 한다.
+
+프로젝트는 보통 workspace 위치에 저장된다.
+혹시라도 다른곳에 저장하고 싶으면 use default location 클릭하기!
+
+파일 만들어지면 파일아이콘에 J가 붙어있을 것이다
+파일 확장하면 scr가 있을것인데 src가 소스코드 폴더이며 소스코드가 다 저장된다.
+
+src 우클릭 new마우스 갖다대면 class나온다
+name 에 이름적기
+
+public static void main 클릭하면
+자동으로 메인메소드 작성해준다.
+
+
+원래 창으로 돌아가는것 
+window - perspective - Reset perspective
+
+필드 생성 후 빈공간에 우클릭 - sorce - generate constructor using feild 하면 자동으로
+생성자가 만들어진다
+
+에러가 뜨면 오른쪽에 빨간네모가 생긴다
+네모 클릭하면 에러로 가고 간단한 에러는 해결방안을 제시해준다.
+
+
+**********단축키***********
+
+ctrl+ space 자동으로 단축키 보여줌 해줌.
+if문 while 문 System.out등등 다 있다.
+
+ctrl + shift + f 자동 서식 정렬(들여쓰기 자동으로)
+
