@@ -32,7 +32,6 @@ class Member {
 	}
 	
 	public Member(String name, double height, double weight) {
-		super();
 		this.name = name;
 		this.height = height;
 		this.weight = weight;
@@ -68,37 +67,14 @@ class Member {
 		return "Member [name=" + name + ", height=" + height + ", weight=" + weight + "]";
 	}
 	
-
-}
-
-class BmiMachine extends Member {
-	public BmiMachine(Member[] input) {
-		for (int i = 0; i < input.length; i++) {
-			if(input[i].name.equals(null)) {
-				System.out.println("BMI 끝");
-				break;
-			}
-			name = input[i].name;
-			height = input[i].height;
-			weight = input[i].weight;
-			System.out.println(bmiResult());
-		}
-	}
-	// 생성자
-//	public BmiMachine(String name, double heigth, double weigth) {
-//		super(name, heigth, weigth);
-//	}
-
 	// bmi 구하는 메소드
 	public double bmi() {
-		// 키를 183 이렇게 적는 사람이 있을까봐 만든 if문!!!
 		if (height > 10) {
 			height = height/100;
 		} 
 		return (weight/(height*height));
 	}
 	
-	// bmi 지수 따른 분류 메소드
 	public String bmiResult() {
 		if (bmi() <= 35) {
 		return  "결과 : 고도비만" + "현재 BMI : " + bmi() + "35이상";
@@ -118,12 +94,30 @@ class BmiMachine extends Member {
 	public void printBmi() {
 		System.out.println(bmiResult());
 	}
+
 }
 
+
 class MemberManagement {
+	Member[] m = new Member[10];
+	
+	public MemberManagement() {
+		for (int i = 0; i < this.m.length; i++) {
+			System.out.println("등록할래요 ? 아니면 1번");
+			int input = scan.nextInt();
+			if (input == 1) {
+				break;
+			} else {
+			this.m[i] = input();
+			}
+		}
+		System.out.println("등록 종료");
+	}
+
 	Scanner scan = new Scanner(System.in);
 	// 사용자가 정보 입력하면 회원이 만들어지는 메소드
 	public Member input(){
+		scan.nextLine();
 		System.out.println("이름을 입력하세요");
 		String name = scan.nextLine();
 		
@@ -136,6 +130,7 @@ class MemberManagement {
 		}
 		System.out.println("몸무게를 입력하세요(kg)");
 		double weight = scan.nextDouble();
+		scan.nextLine();
 		Member input = new Member(name, height, weight);
 		return input;
 	}
@@ -183,8 +178,10 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+//		MemberManagement x = new MemberManagement();
+//		//x.members();
+//		BmiMachine m = new BmiMachine(x.members());
 		MemberManagement x = new MemberManagement();
-		//x.members();
-		BmiMachine m = new BmiMachine(x.members());
+		System.out.println(x.m[0].toString());
 	}
 }
