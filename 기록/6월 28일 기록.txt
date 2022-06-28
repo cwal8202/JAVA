@@ -19,3 +19,6 @@ modal값이 true면 setVisible이 true일때 흐름이 막힌것 처럼된다.
 setVisible이 dispose됐을때 막힌 흐름이 다시 흘러간다.
 
 
+windowOpened // 창이 열렸을때
+windowActivated // 창이 활성화, gained focus 된것처럼 활성화 된것
+windowClosed // 창이 비활성화, losted focus 된것처럼 활성화 된것
