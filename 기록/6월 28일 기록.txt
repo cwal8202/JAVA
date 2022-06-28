@@ -1,0 +1,21 @@
+JDialog // 최소화 최대화 버튼이 없다.
+DISPOSE_ON_CLOSE // 기본값이며 창을 닫으면 그 창만 닫힌다.
+EXIT_ON_CLOSE // 창을 닫으면 종료된다.
+dispose(); // 창이 없어지는 메소드이다.
+setModal(true);	// 이 메소드가 true인 창이 닫히기 전까지 
+// 다른 창으로 넘어가지 못하게 하는 메소드이다. 
+// 생성자super(owner, true)에 true를 넣어도 똑같이 작동한다.
+
+
+SubWindow에 왜 Main.this한걸까?
+제목이랑 모달 설정값을 전달받는다 JDialog가
+프레임을 전달받는 생성자 값이 있다. 어느창에서 다이어로그를 전달받는지 아는 참조값이다.
+다이얼로그 필드값 초기화할려고 한거다.
+modal값이 true면 다른 창들과 상호작용이 안된다.
+modal값이 true면 setVisible(true)이후 흐름이 멈춘것 처럼 보인다.
+
+
+modal값이 true면 setVisible이 true일때 흐름이 막힌것 처럼된다.
+setVisible이 dispose됐을때 막힌 흐름이 다시 흘러간다.
+
+
