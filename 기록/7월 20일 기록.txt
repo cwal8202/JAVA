@@ -1,0 +1,54 @@
+CREATE FUNCTION `new_function` () // 파라미터에는 이름 + 입력 타입
+RETURNS INTEGER		// 반환 타입
+BEGIN
+	
+RETURN 1;		// 반환 값
+END				// begin부터 end사이에 코드적기.
+
+CREATE PROCEDURE usp_findbytitle (IN title VARCHAR(50), OUT count INT)
+// in 입력값, out 출력값       파라미터의 형태로 출력값이 있다.
+
+
+declare 는 지역변수다.
+// case when으로 원하는 table 선택 연습
+CREATE usp_selectTable(tableName varchar(50))
+BEGIN
+	case when tableName = 'books' then
+			select * from books;
+        when tableName = 'students' then
+			select * from students;
+		end case;		// end case 먼저 닫고 end로 닫는다.
+END
+
+// 반복문 연습
+CREATE usp_loop(in num INT)
+BEGIN
+	DECLARE i INT;
+    declare sum int default 0;
+    
+    set i = 0;
+    
+    while i < num do
+	 set sum = sum + i;
+     set i = i + 1;
+	end while;
+    
+--  repeat
+--	 set sum = sum + i;
+--   set i = i + 1;
+--	until i > num end repeat;
+    
+    select sum;
+
+END
+
+
+union = 행을 합쳐준다. 특징 = 행이 중복되면 중복된 행은 사라진다.
+union All = 행을 합쳐준다 대신 중복된 행도 같이 합쳐진다.
+
+join과 innerjoin은 같다
+참조값이 있을때 참조되는것을 볼려고 join을 쓴다.
+
+column 값이 중복이 되는 경우 where로 column을 나누면 ambigous 오류가 뜬다. 왜냐면 어떤 column을 기준으로 나누는지를 
+정하지 않았기 때문이다. 그래서 예를 들어 a.column처럼 어떤 column을 기준으로 나눌지 정하면 된다.
+ 
