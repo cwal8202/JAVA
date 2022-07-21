@@ -1,0 +1,24 @@
+복잡한 select문을 조회할때 view를 쓰면 된다.
+view는 select문의 이름 붙인거 일뿐이라서 새로운 column이나 새로운 행 추가는 안된다.
+그냥 보는 목적일 뿐이다.
+
+view는 select문에 이름 지은것. 호출할때 view 이름을 적으면 바로 select문이 된다
+
+stored procedure은 논리적인 흐름을 가진다. select create insert delete등의 동작을 다 할 수 있다.
+
+view는 A, B table에 접근 제한된 사람에게 A, B table의 보여주고 싶은 내용만 보여줄 수 있다는 장점이 있다.
+
+-- 임시 테이블 생성할 수 있다. 근데 접속 껐다 키면 다시 없어진다. 
+create temporary
+table 생성할때 create 뒤에 temporary만 하면 됨.
+
+사용자 만들수 있다
+root계정으로 권한을 부여할 수 있다.
+
+내 ip로 만든 db에 사용자를 만들수 있다.
+내가 권한 다 준 아이디는 내 모든 table수정 가능하다.
+user and privleges
+add account - administratice roles 에서 권한 부여가능
+
+
+데이터 베포 expert
